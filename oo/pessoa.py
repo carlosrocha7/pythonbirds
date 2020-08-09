@@ -29,6 +29,7 @@ class Pessoa:
         return self.nome
 
 
+
 def num_filhos():
     num=int(input('Número de filhos: '))
     return num
@@ -53,10 +54,4 @@ if __name__ == '__main__':
         print(',', pai_filhos.filhos[1][c], end=' ')
 
 
-    '''for c in range(1):
-        print(pai_filhos.filhos[c], end='')
-    print(pai_filhos.filhos[1:])
-
-
-'''
 
