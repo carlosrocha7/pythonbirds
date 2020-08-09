@@ -1,25 +1,6 @@
-'''class Pessoa:
-    def __init__(self,nome=None,idade=35):
-        self.idade = idade
-        self.nome = nome
-
-
-
-
-    def cumprimentar(self):
-        return 'olá'
-
-
-
-if __name__ == '__main__':
-    p = Pessoa('Filho')
-    print(p.cumprimentar())
-    print(p.nome)
-    print(p.idade)'''
-
-
-
 class Pessoa:
+    olhos = 2
+
     def __init__(self, *filhos, idade = 'Não informada', nome=None):
         self.filhos = list(filhos)
         self.idade = idade
@@ -46,12 +27,18 @@ def filhos(num):
 if __name__ == '__main__':
     renzo = Pessoa(nome='renzo')
     pai_filhos = Pessoa(*(renzo, filhos(num_filhos())), nome=input('Seu nome: '))
-    print(f'Nome: {pai_filhos.nome}')
-    print(f'Idade: {pai_filhos.idade}')
+    renzo.olhos = 3
+    print(f'atributos pai_filhos = {pai_filhos.__dict__}')
+    print(f'atributos renzo ={renzo.__dict__}')
+    print(f'Nome pai: {pai_filhos.nome}')
+    print(f'Idade pai: {pai_filhos.idade}')
     print(f'Nome dos filhos: ', end='')
     print(pai_filhos.filhos[0], end=' ')
     for c in range(len(pai_filhos.filhos[1])):
         print(',', pai_filhos.filhos[1][c], end=' ')
+    print()
+    print(Pessoa.__dict__)
+
 
 
 
