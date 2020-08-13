@@ -9,6 +9,13 @@ class Pessoa:
     def __repr__(self):
         return self.nome
 
+    @staticmethod
+    def metodo_estatico():
+        return 42
+
+    @classmethod
+    def nome_e_atributos_de_classes(cls):
+        return f'{cls} - olhos {cls.olhos}'
 
 
 def num_filhos():
@@ -38,7 +45,8 @@ if __name__ == '__main__':
         print(',', pai_filhos.filhos[1][c], end=' ')
     print()
     print(Pessoa.__dict__)
-
+    print(Pessoa.metodo_estatico(), pai_filhos.metodo_estatico())
+    print(Pessoa.nome_e_atributos_de_classes(), pai_filhos.nome_e_atributos_de_classes())
 
 
 
